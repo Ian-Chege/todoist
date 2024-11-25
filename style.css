@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2b2f3e;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #3b4054;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 500px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background-color: #3df065;
+  margin: 0 auto 20px;
+}
+
+.task-summary {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4a4f65;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.task-info {
+  text-align: center;
+}
+
+.task-info span {
+  font-size: 1.5em;
+  color: #3df065;
+}
+
+.task-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 65%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1em;
+  background: #5a5f77;
+  color: white;
+}
+
+input::placeholder {
+  color: #b0b4c2;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3df065;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #32c957;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  padding: 15px;
+  background: #4a4f65;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-details {
+  text-align: left;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.complete-btn {
+  background-color: #3df065;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #ffcc00;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #f55753;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #7abf83;
+}
