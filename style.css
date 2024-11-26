@@ -5,7 +5,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -15,24 +16,28 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   text-align: center;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
+/* Header-section */
 h1 {
   font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .underline {
   width: 60px;
   height: 3px;
   background-color: #3df065;
-  margin: 0 auto 20px;
+  margin: 0 auto 20px; /* top, right&left, bottom */
 }
 
+/* Task-Summary section */
 .task-summary {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #4a4f65;
   padding: 15px 20px;
   border-radius: 10px;
@@ -43,12 +48,13 @@ h1 {
   text-align: center;
 }
 
-.task-info span {
+.task-info h2 {
   font-size: 1.5em;
   color: #3df065;
 }
 
-.task-input {
+/* Task-Input section */
+.task-input form {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -69,6 +75,14 @@ input::placeholder {
   color: #b0b4c2;
 }
 
+/* Error message */
+.error-message {
+  color: #f55753;
+  margin-bottom: 10px;
+}
+
+
+/* Button section */
 button {
   padding: 10px 20px;
   border: none;
@@ -84,6 +98,11 @@ button:hover {
   background-color: #32c957;
 }
 
+button:focus {
+  outline: 2px solid #fff;
+}
+
+/* Task-List section */
 ul {
   list-style-type: none;
   padding: 0;
@@ -104,36 +123,36 @@ li {
   text-align: left;
 }
 
+.task-details span {
+  word-break: break-word;
+}
+
 .task-actions {
   display: flex;
   gap: 10px;
 }
 
-.complete-btn {
-  background-color: #3df065;
-  border: none;
+.task-actions button {
   padding: 5px 10px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* Action-Button */
+.complete-btn {
+  background-color: #3df065;
 }
 
 .edit-btn {
   background-color: #ffcc00;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .delete-btn {
   background-color: #f55753;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-.completed {
+.task-details .completed {
   text-decoration: line-through;
   color: #7abf83;
 }
