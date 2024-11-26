@@ -9,20 +9,14 @@ let completedTasks = 0;
 function addTask() {
   const taskInput = document.getElementById('taskInput');
   const taskText = taskInput.value.trim();
+  const errorMessage = document.getElementById('error-message');
 
   // Error handling section
   if (taskText === '') {
-    const errorMessage = document.getElementById('error-message');
     errorMessage.textContent = 'Please enter a task';
     return;
   } else {
     errorMessage.textContent = '';
-  }
-
-  const maxLength = 30;
-  if (taskText.length > maxLength) {
-    errorMessage.textContent = `Task cannot exceed ${maxLength} characters!`;
-    return;
   }
 
   // Create new task list item
