@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>To-Do App</title>
-</head>
-<body>
-  <div class="container">
-    <h1>TodoList</h1>
-    <div class="underline"></div>
-    <div class="task-summary">
-      <div class="task-info">
-        <span id="totalTasks">0</span>
-        <p>Total Tasks</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple and efficient to-do app to keep track of your tasks."
+    />
+    <meta
+      name="keywords"
+      content="to-do, to-do app, tasks, task manager, task list"
+    />
+    <meta name="author" content="Terra" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To-Do App</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- Header -->
+      <header>
+        <h1>TodoList</h1>
+        <div class="underline"></div>
+      </header>
+      <!-- Task summary section -->
+      <section class="task-summary">
+        <div class="task-info">
+          <h2 id="totalTasks">0</h2>
+          <p>Total Tasks</p>
+        </div>
+        <div class="task-info">
+          <h2 id="completedTasks">0</h2>
+          <p>Completed</p>
+        </div>
+        <div class="task-info">
+          <h2 id="completionRate">0%</h2>
+          <p>Completion rate</p>
+        </div>
+      </section>
+      <!-- Task input section -->
+      <div class="task-input">
+        <form id="taskForm">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a new task..."
+            aria-label="Task Input"
+          />
+          <button type="submit" id="addTaskButton">Add Task</button>
+        </form>
       </div>
-      <div class="task-info">
-        <span id="completedTasks">0</span>
-        <p>Completed</p>
-      </div>
-      <div class="task-info">
-        <span id="completionRate">0%</span>
-        <p>Completion rate</p>
-      </div>
-    </div>
-    <div class="task-input">
-      <input type="text" id="taskInput" placeholder="Enter a new task...">
-      <button id="addTaskButton">Add Task</button>
-    </div>
-    <ul id="taskList"></ul>
-  </div>
-  <script src="script.js"></script>
-</body>
+      <div id="error-message" class="error-message"></div>
+      <!-- Task List view -->
+      <ul id="taskList"></ul>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
